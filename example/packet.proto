@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message Capture {
+	repeated int32 channelVoltage = 1;
+}
+
+message Wrapper {
+	repeated Capture capture = 1;
+    optional uint32 sequenceNumber = 2;
+	optional uint32 timeStamp = 3;
+}
